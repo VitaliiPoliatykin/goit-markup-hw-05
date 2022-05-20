@@ -496,6 +496,8 @@ img {
   margin-right: 30px;
   margin-bottom: 30px;
   transition: box-shadow var(--hov-focus);
+  position: relative;
+  overflow: auto;
 }
 .projects-item:nth-child(3n) {
   margin-right: 0px;
@@ -504,8 +506,9 @@ img {
   margin-bottom: 0px;
 }
 .projects-item:hover,
-.projects-item:focus {
+.projects-item:focus .project-img {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 1px 4px rgba(0, 0, 0, 0.06);
+  transform: ;
 }
 .project-description {
   padding: 20px 24px;
@@ -523,4 +526,20 @@ img {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: #757575;
+}
+.project-img {
+  transition: transform var(--hov-focus);
+}
+.animation-description {
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--secondary-txt-cl);
+  width: 370px;
+  height: 294px;
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
