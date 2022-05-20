@@ -11,6 +11,9 @@
   /* bacground colors */
   --main-bg-cl: #ffffff;
   --secondary-bg-cl: #2f303a;
+
+  /* animation */
+  --hov-focus: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   font-family: var(--main-font);
@@ -69,6 +72,7 @@ img {
   font-family: inherit;
   color: inherit;
   border-radius: 4px;
+  transition: background-color var(--hov-focus), color var(--hov-focus), box-shadow var(--hov-focus);
 }
 .btn:hover,
 .btn:focus {
@@ -131,6 +135,7 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
   position: relative;
+  transition: color var(--hov-focus);
 }
 .navigation-link.current {
   color: var(--accent-cl);
@@ -165,6 +170,7 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
   align-items: center;
+  transition: color var(--hov-focus);
 }
 .contacts-icon {
   fill: currentColor;
@@ -215,6 +221,7 @@ img {
   min-height: 50px;
   margin-left: auto;
   margin-right: auto;
+  transition: background-color var(--hov-focus);
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -353,12 +360,13 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  transition: background-color var(--hov-focus), color var(--hov-focus);
 }
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-cl);
   color: var(--secondary-txt-cl);
-  border-radius: 50%;
 }
 .socials-icon {
   fill: currentColor;
@@ -384,6 +392,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: color var(--hov-focus), border-color var(--hov-focus);
 }
 .clients-link:hover,
 .clients-link:focus {
@@ -415,12 +424,14 @@ img {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  transition: color var(--hov-focus);
 }
 .footer-link {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition: color var(--hov-focus);
 }
 .footer-list {
   font-style: normal;
@@ -484,6 +495,7 @@ img {
 .projects-item {
   margin-right: 30px;
   margin-bottom: 30px;
+  transition: box-shadow var(--hov-focus);
 }
 .projects-item:nth-child(3n) {
   margin-right: 0px;
