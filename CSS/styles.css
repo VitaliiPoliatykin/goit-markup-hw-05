@@ -494,17 +494,12 @@ img {
 .projects-item {
   margin-right: 30px;
   margin-bottom: 30px;
-  transition: box-shadow var(--hov-focus);
 }
 .projects-item:nth-child(3n) {
   margin-right: 0px;
 }
 .projects-item:nth-last-child(-n + 3) {
   margin-bottom: 0px;
-}
-.projects-item:hover,
-.projects-item:focus {
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 1px 4px rgba(0, 0, 0, 0.06);
 }
 .project-description {
   padding: 20px 24px;
@@ -524,10 +519,16 @@ img {
   color: #757575;
 }
 .project-link {
+  display: block;
   position: relative;
-  overflow: hidden;
+  transition: box-shadow var(--hov-focus);
+}
+.project-link:hover,
+.project-link:focus {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 1px 4px rgba(0, 0, 0, 0.06);
 }
 .animation-description {
+  display: block;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
@@ -539,20 +540,16 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  animation: fade-bottom-to-top 2s;
+  overflow: auto;
+  transition: transform var(--hov-focus);
+  opacity: 0;
 }
-@keyframes fade-bottom-to-top {
-  from {
-    transform: translatey(294px);
-    opacity: 1;
-  }
-
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+.animation-card:hover,
+.animation-card:focus {
+  transform: translateY(-100%);
+  opacity: 1;
 }
-
+,
 /* Модальное окно */
 .backdrop {
   position: fixed;
