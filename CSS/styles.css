@@ -576,7 +576,17 @@ img {
   height: 581px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transition: transform 1000ms, opacity 300ms;
+}
+/* початковий стан елемента перед анімацією */
+.backdrop.is-hidden .modal-wrapper {
+  transform: translateY(-800px) rotate(-540deg) scale(0.1);
+  opacity: 0;
+}
+/* кінцевий стан елемента після анімації */
+.backdrop .modal-wrapper {
+  transform: translateY(0) rotate(0deg) translate(-50%, -50%) scale(1);
+  opacity: 1;
 }
 
 .modal-btn {
@@ -595,5 +605,5 @@ img {
   padding: 0;
 }
 .close-icon {
-  fill: red;
+  fill: currentColor;
 }
