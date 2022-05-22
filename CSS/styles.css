@@ -579,12 +579,12 @@ img {
 }
 /* початковий стан елемента перед анімацією */
 .backdrop.is-hidden .modal-wrapper {
-  transform: translateY(-800px) rotate(-540deg) scale(0.1);
+  transform: translateY(-800px) rotate(-540deg);
   opacity: 0;
 }
 /* кінцевий стан елемента після анімації */
 .backdrop .modal-wrapper {
-  transform: translateY(0) rotate(0deg) translate(-50%, -50%) scale(1);
+  transform: translateY(0) rotate(0deg) translate(-50%, -50%);
   opacity: 1;
 }
 
