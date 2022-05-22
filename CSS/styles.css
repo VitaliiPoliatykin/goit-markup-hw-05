@@ -543,7 +543,6 @@ img {
   padding: 63px 24px;
   background-color: rgba(33, 150, 243, 0.9);
   position: absolute;
-  overflow: auto;
   transition: transform var(--hov-focus);
   opacity: 0;
 }
